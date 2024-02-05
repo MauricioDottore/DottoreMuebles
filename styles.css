@@ -1,0 +1,776 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight:300;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Evita la barra de desplazamiento horizontal */
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0px;
+}
+
+.nav-main {
+    background-color: #252525;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: space-between; /* Alinear elementos en los extremos */
+    align-items: center; /* Centrar verticalmente los elementos */
+    padding: 0 20px; /* Ajustar el relleno para el espacio alrededor del logo y el menú */
+}
+
+.nav-main img {
+    margin-top: 0px;
+    max-height: 50px; /* Ajustar la altura máxima del logo */
+}
+
+/*NAV MENU*/
+.nav-menu,
+.nav-menu-right {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li,
+.nav-menu-right li {
+    display: inline-block;
+    margin-right: 20px; /* Ajustar el margen entre elementos del menú */
+}
+
+.nav-menu li:last-child,
+.nav-menu-right li:last-child {
+    margin-right: 0; /* Eliminar el margen derecho del último elemento del menú */
+}
+
+.nav-menu li a,
+.nav-menu-right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/*HOVER EFECTO*/
+.nav-menu li a:hover {
+    color: #e6e6e6; /* Cambia el color del texto al pasar el mouse */
+}
+
+.nav-menu li a::after {
+    content: ''; /* Agrega un pseudo-elemento después del enlace */
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #e7e7e7; /* Color de la línea */
+    transition: width 0.3s; /* Transición suave */
+}
+
+.nav-menu li a:hover::after {
+    width: 100%; /* Anima la anchura al pasar el mouse */
+}
+
+/*SLIDER*/
+.slider {
+    position: relative; /* Cambia a posicionamiento relativo */
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 100px); /* Calcula la altura de la pantalla menos la barra de navegación */
+}
+
+.slider ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.slider ul li {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Ajusta a posicionamiento relativo */
+}
+
+/*FOOTER*/
+.footer {
+    background-color: #252525;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-logo-list,
+.footer-contact-list,
+.footer-social-list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-logo-list img {
+    max-width: 100px;
+    max-height: 50px;
+}
+
+.footer-contact-list li,
+.footer-social-list li {
+    margin-bottom: 10px;
+}
+
+.footer-social-list a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+
+
+/*BOTON WAP*/
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
+
+/* CSS mejorado para "Nuestra ubicación" con interactividad en el h2 */
+.location {
+    text-align: center;
+    background-color: #252525; /* Fondo oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 10px 0; /* Aumentar el espacio interno */
+}
+
+.location h2 {
+    font-size: 24px; /* Tamaño de fuente más grande */
+    margin: 0;
+    transition: color 0.3s; /* Transición suave del color */
+    cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+    padding: 30px;
+}
+
+.location h2:hover {
+    color: #bdbdbd; /* Cambiar el color al pasar el mouse */
+}
+
+.location p {
+    font-size: 16px; /* Tamaño de fuente del texto */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilizar el iframe de Google Maps */
+.location iframe {
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0px; /* Bordes redondeados */
+    max-width: 100%;
+    height: 600px; /* Reducir la altura para que se vea mejor en la página */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+
+/*PANEL TRIPLE*/
+.tricolor-panel {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #f0f0f0; /* Color de fondo gris claro */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+.panel-item {
+    text-align: center;
+    padding: 20px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #ffffff; /* Color de fondo blanco */
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.panel-item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.panel-item i {
+    font-size: 30px; /* Tamaño de los iconos */
+    color: #555555; /* Color de iconos */
+}
+
+.panel-item h3 {
+    margin-bottom: 10px; /* Espaciado inferior */
+    font-size: 20px; /* Tamaño de fuente del título */
+    color: #333333; /* Color del texto del título */
+}
+
+.panel-item p {
+    font-size: 16px; /* Tamaño de fuente del texto */
+    color: #000000; /* Color del texto */
+}
+
+/*CATALOGO*/
+.album-content h1{
+        font-size: 24px; /* Tamaño de fuente más grande */
+        margin: 0px 0px 0px;
+        transition: color 0.3s; /* Transición suave del color */
+        cursor: pointer; /* Cambiar el cursor al pasar el mouse */
+        padding: 30px;
+        text-align: center;
+        background-color: #ffffff; /* Fondo oscuro */
+        color: #000000; /* Texto blanco */
+    }
+    
+.album-content h1:hover {
+        color: #bdbdbd; /* Cambiar el color al pasar el mouse */
+    }
+
+/* Estilos para el álbum de fotos */
+.album-content {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.album-content h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.photo-carousel {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las fotos se envuelvan en múltiples líneas */
+    justify-content: center;
+}
+
+.photo {
+    margin: 0 10px;
+    text-align: center;
+    width: 30%; /* Establece un ancho fijo para cada foto */
+    margin-bottom: 20px; /* Añade un margen inferior para separar las fotos */
+}
+
+.photo img {
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+}
+
+.photo img:hover {
+    transform: scale(1.05);
+}
+
+.photo h2 {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/*Obras realizadas*/
+
+/* Estilos para la sección de obras realizadas */
+
+.obras-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.obra {
+    width: 30%;
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.obra:hover {
+    transform: translateY(-5px);
+}
+
+.obra img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.obra h2 {
+    margin-top: 15px;
+    font-size: 20px;
+}
+
+.obra p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/*Nuestra empresa*/
+.empresa-section {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.empresa-section > div {
+    width: calc(100% / 3 - 40px);
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.empresa-section h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.empresa-section p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/*Contacto*/
+/* Estilos para la sección de Contacto */
+
+.contacto-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.formulario,
+.informacion {
+    width: calc(50% - 20px);
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formulario h2,
+.informacion h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario button,
+.informacion p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.formulario button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: #0056b3;
+}
+
+div.album-content{
+    padding:0px 0px;
+}
+
+
+/* Mobile Devices Styles */
+
+/* Common Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    background-color: #ffffff;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+a {
+    color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.nav-main {
+    background-color: #252525;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-main img {
+    margin-top: 0px;
+    max-height: 50px;
+}
+
+.nav-menu,
+.nav-menu-right {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li,
+.nav-menu-right li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.nav-menu li:last-child,
+.nav-menu-right li:last-child {
+    margin-right: 0;
+}
+
+.nav-menu li a,
+.nav-menu-right li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.nav-menu li a:hover {
+    color: #e6e6e6;
+}
+
+.nav-menu li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #e7e7e7;
+    transition: width 0.3s;
+}
+
+.nav-menu li a:hover::after {
+    width: 100%;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 100px); /* Adjust according to your header height */
+}
+
+.slider ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+
+.slider ul li {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.tricolor-panel {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.panel-item {
+    flex: 1 1 250px;
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+.panel-item i {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.panel-item h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.panel-item p {
+    font-size: 14px;
+    color: #666;
+}
+
+.location {
+    text-align: center;
+    background-color: #252525;
+    color: #ffffff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 0px;
+}
+
+.location h2 {
+    font-size: 24px;
+    margin: 0;
+    transition: color 0.3s;
+    cursor: pointer;
+    padding: 30px;
+    margin-top: 0;
+    color: #ffffff;
+}
+
+.location h2:hover {
+    color: #cacaca;
+}
+
+.location p {
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.location iframe {
+    border: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    max-width: 100%;
+    height: 600px;
+    margin-top: 20px;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 250px;
+    margin: 10px;
+}
+
+.footer-logo-list,
+.footer-contact-list,
+.footer-social-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-logo-list img {
+    width: 100px;
+    height: auto;
+}
+
+.footer-social-list li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.footer-social-list a {
+    color: #fff;
+    font-size: 24px;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background-color: #128c7e;
+}
+
+/* Media Query for Mobile Optimization */
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 60px; /* Adjust according to your header height */
+        left: 0;
+        width: 100%;
+        background-color: #252525;
+        padding-top: 20px;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .nav-main {
+        justify-content: flex-start;
+    }
+
+    .nav-menu {
+        order: 2; /* Moves the nav-menu to the right */
+    }
+
+    .slider ul li img {
+        height: auto;
+    }
+
+    .location iframe {
+        height: 200px;
+    }
+
+    .footer-section {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* HAMBURGESA */
+/* Burger Menu Styles */
+.burger-menu {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 15px;
+    right: 20px; /* Adjust as needed */
+    z-index: 999; /* Ensure it's above other content */
+}
+
+.burger-icon {
+    width: 25px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+}
+
+.line {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    margin: 5px auto;
+    transition: transform 0.3s ease; /* Smooth transition effect */
+}
+
+/* Animation for burger icon lines */
+@keyframes rotateBurger {
+    0% {
+        transform: rotate(0);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: block; /* Show burger menu on mobile */
+    }
+
+    .nav-menu {
+        display: none; /* Hide regular nav menu on mobile */
+    }
+
+    .nav-menu-right {
+        display: none; /* Hide right nav menu on mobile */
+    }
+
+    .burger-menu.active .line:nth-child(1) {
+        animation: rotateBurger 0.6s ease forwards;
+    }
+
+    .burger-menu.active .line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .line:nth-child(3) {
+        animation: rotateBurger 0.6s ease forwards;
+    }
+}
