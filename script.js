@@ -49,21 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-/*Obras realizadas*/
-document.addEventListener('DOMContentLoaded', function() {
-    const obras = document.querySelectorAll('.obra');
-
-    obras.forEach(function(obra) {
-        obra.addEventListener('mouseenter', function() {
-            obra.style.backgroundColor = '#f0f0f0';
-        });
-
-        obra.addEventListener('mouseleave', function() {
-            obra.style.backgroundColor = 'transparent';
-        });
-    });
-});
-
 /*NUestra empresa*/
 document.addEventListener('DOMContentLoaded', function() {
     const seccionEmpresa = document.querySelector('.empresa-section');
@@ -99,3 +84,5 @@ document.querySelector('.burger-menu').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
     document.querySelector('.nav-menu-right').classList.toggle('active');
 });
+
+/*Obras realizadas*/

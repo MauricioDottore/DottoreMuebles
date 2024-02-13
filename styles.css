@@ -298,43 +298,6 @@ body {
 
 /*Obras realizadas*/
 
-/* Estilos para la sección de obras realizadas */
-
-.obras-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.obra {
-    width: 30%;
-    margin-bottom: 30px;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.obra:hover {
-    transform: translateY(-5px);
-}
-
-.obra img {
-    width: 100%;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.obra h2 {
-    margin-top: 15px;
-    font-size: 20px;
-}
-
-.obra p {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
 /*Nuestra empresa*/
 .empresa-section {
     display: flex;
