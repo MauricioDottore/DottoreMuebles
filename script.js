@@ -106,3 +106,30 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+/*Servicios*/
+const botones = document.querySelectorAll('.servicios button');
+
+botones.forEach(boton => {
+  boton.addEventListener('click', () => {
+    const contenido = boton.nextElementSibling;
+    contenido.classList.toggle('oculto');
+  });
+});
+
+
+/*Catalogo*/
+document.addEventListener("DOMContentLoaded", function() {
+    // Agregar evento de clic suave a las imágenes
+    var photos = document.querySelectorAll(".photo");
+    photos.forEach(function(photo) {
+        photo.addEventListener("click", function() {
+            // Desplazamiento suave a la posición de la foto
+            var yOffset = -80; // Ajuste opcional de compensación de desplazamiento vertical
+            var target = this.getBoundingClientRect().top + window.pageYOffset + yOffset;
+            window.scrollTo({ top: target, behavior: 'smooth' });
+        });
+    });
+});
+
+

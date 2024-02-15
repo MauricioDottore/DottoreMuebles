@@ -240,82 +240,172 @@ body {
 }
 
 /*CATALOGO*/
-.album-content h1{
-        font-size: 24px; /* Tamaño de fuente más grande */
-        margin: 0px 0px 0px;
-        transition: color 0.3s; /* Transición suave del color */
-        cursor: pointer; /* Cambiar el cursor al pasar el mouse */
-        padding: 30px;
-        text-align: center;
-        background-color: #ffffff; /* Fondo oscuro */
-        color: #000000; /* Texto blanco */
-    }
-    
-.album-content h1:hover {
-        color: #bdbdbd; /* Cambiar el color al pasar el mouse */
-    }
+/* Album Content */
 
-/* Estilos para el álbum de fotos */
+
 .album-content {
-    text-align: center;
-    padding: 50px 0;
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .album-content h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+}
+
+/* Catalog Section */
+.catalog-section {
+    margin-bottom: 40px;
+}
+
+.catalog-section h2 {
+    font-size: 24px;
+    color: #555;
+    margin-bottom: 15px;
 }
 
 .photo-carousel {
     display: flex;
-    flex-wrap: wrap; /* Permite que las fotos se envuelvan en múltiples líneas */
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .photo {
-    margin: 0 10px;
-    text-align: center;
-    width: 30%; /* Establece un ancho fijo para cada foto */
-    margin-bottom: 20px; /* Añade un margen inferior para separar las fotos */
+    width: calc(25% - 20px);
+    margin-bottom: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .photo img {
+    width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
-    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
 }
 
-.photo img:hover {
-    transform: scale(1.05);
+.photo h3 {
+    font-size: 16px;
+    color: #333;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    transition: background-color 0.3s ease-in-out;
 }
 
-.photo h2 {
-    font-size: 18px;
-    margin-top: 10px;
+.photo:hover img {
+    transform: scale(1.1);
 }
 
+.photo:hover h3 {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .photo {
+        width: calc(50% - 20px);
+    }
+}
 /*Servicios*/
 
-/*Obras realizadas*/
-.album-content h1{
-    margin: 20px 0px 0px;
-}
-
-/*Nuestra empresa*/
-.album-content {
-    padding: 40px;
-    background-color: #f9f9f9;
+.servicios {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.album-content h1 {
-    font-size: 2.5rem;
+.servicios h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+}
+
+.servicios h2 {
+    text-align: center;
+    font-size: 24px;
     color: #333;
     margin-bottom: 20px;
 }
+
+.servicios p {
+    color: #000000;
+    line-height: 1.6;
+}
+
+/* List style for sections */
+.servicios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicios li {
+    margin-bottom: 40px;
+}
+
+.servicios h3 {
+    font-size: 24px;
+    color: #383838;
+    margin-bottom: 10px;
+}
+
+.servicios img {
+    width: 100%;
+    max-width: 300px; /* Reduced size */
+    height: auto;
+    display: block;
+    border-radius: 5px;
+}
+
+.servicios section {
+    background-color: #f9f9f9; /* Light gray background for sections */
+    padding: 15px; /* Add padding to improve spacing */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.servicios section:hover {
+    background-color: #e0e0e0; /* Darker gray on hover */
+}
+
+.servicios section p {
+    margin-top: 10px;
+    opacity: 0; /* Hide text by default */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.servicios section:hover p {
+    opacity: 1; /* Show text on hover */
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .servicios {
+        padding: 10px;
+    }
+    .servicios h1 {
+        font-size: 24px;
+    }
+    .servicios h2 {
+        font-size: 20px;
+    }
+    .servicios img {
+        max-width: 100%;
+    }
+}
+
+/*Obras realizadas*/
+
+/*Nuestra empresa*/
+
 
 .album-content p {
     font-size: 1.1rem;
