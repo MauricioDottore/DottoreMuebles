@@ -119,17 +119,38 @@ botones.forEach(boton => {
 
 
 /*Catalogo*/
-document.addEventListener("DOMContentLoaded", function() {
-    // Agregar evento de clic suave a las imágenes
-    var photos = document.querySelectorAll(".photo");
+document.addEventListener('DOMContentLoaded', function() {
+    const photos = document.querySelectorAll('.photo img');
     photos.forEach(function(photo) {
-        photo.addEventListener("click", function() {
-            // Desplazamiento suave a la posición de la foto
-            var yOffset = -80; // Ajuste opcional de compensación de desplazamiento vertical
-            var target = this.getBoundingClientRect().top + window.pageYOffset + yOffset;
-            window.scrollTo({ top: target, behavior: 'smooth' });
+        photo.addEventListener('click', function() {
+            expandImage(photo);
         });
     });
 });
+
+function expandImage(img) {
+    var overlay = document.createElement('div');
+    overlay.id = 'overlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.onclick = function () {
+        overlay.parentNode.removeChild(overlay);
+    };
+
+    var imgClone = img.cloneNode();
+    imgClone.style.maxWidth = '90%';
+    imgClone.style.maxHeight = '90%';
+    overlay.appendChild(imgClone);
+
+    document.body.appendChild(overlay);
+}
+
 
 

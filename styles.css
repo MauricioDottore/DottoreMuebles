@@ -516,7 +516,7 @@ body {
     border: 1px solid #ddd;
 }
 .informacion a{
-    color:#555;
+    color:#000000;
 }
 
 .formulario button {
@@ -529,6 +529,8 @@ body {
 .formulario button:hover {
     background-color: #0056b3;
 }
+
+
 
 div.album-content{
     padding:0px 0px;
@@ -883,4 +885,3 @@ a {
         animation: rotateBurger 0.6s ease forwards;
     }
 }
-
