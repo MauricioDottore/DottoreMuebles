@@ -123,6 +123,8 @@ body {
     padding: 0;
 }
 
+
+
 .footer-logo-list img {
     max-width: 100px;
     max-height: 50px;
@@ -428,6 +430,10 @@ body {
     font-size: 30px; /* Tamaño del título */
     color: #333; /* Color del texto */
     margin-bottom: 40px; /* Espaciado inferior */
+}
+
+.contacto-section a {
+    color:black;
 }
 
 .informacion {
