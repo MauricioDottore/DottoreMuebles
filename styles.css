@@ -258,6 +258,12 @@ body {
     color: #333;
 }
 
+.album-content p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
 /* Catalog Section */
 .catalog-section {
     margin-bottom: 40px;
@@ -404,15 +410,49 @@ body {
 
 /*Obras realizadas*/
 
-/*Nuestra empresa*/
+/*Contacto*/
+/* Estilos para la sección de contacto */
+.contacto-section {
+    background-color: #f9f9f9; /* Color de fondo */
+    padding: 60px 0; /* Espaciado interno */
+    text-align: center; /* Alinear el contenido al centro */
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-
-.album-content p {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 20px;
+.contacto-section h1 {
+    font-size: 30px; /* Tamaño del título */
+    color: #333; /* Color del texto */
+    margin-bottom: 40px; /* Espaciado inferior */
 }
 
+.informacion {
+    max-width: 600px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenido horizontalmente */
+}
+
+.informacion h2 {
+    font-size: 24px; /* Tamaño del título */
+    color: #555; /* Color del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.informacion p {
+    font-size: 18px; /* Tamaño del texto */
+    color: #777; /* Color del texto */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+.informacion p strong {
+    color: #333; /* Color del texto en negrita */
+}
+
+
+/*Nuestra empresa*/
 .empresa-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -469,72 +509,6 @@ body {
     }
 }
 
-
-/*Contacto*/
-/* Estilos para la sección de Contacto */
-
-.contacto-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
-    flex-wrap: wrap;
-}
-
-.formulario,
-.informacion {
-    width: calc(50% - 20px);
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.formulario h2,
-.informacion h2 {
-    margin-top: 0;
-    font-size: 24px;
-    color: #333;
-}
-
-.formulario input,
-.formulario textarea,
-.formulario button,
-.informacion p
- {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #555;
-}
-
-.formulario input,
-.formulario textarea,
-.formulario button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid #ddd;
-}
-.informacion a{
-    color:#000000;
-}
-
-.formulario button {
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.formulario button:hover {
-    background-color: #0056b3;
-}
-
-
-
-div.album-content{
-    padding:0px 0px;
-}
 
 
 /* Mobile Devices Styles */
