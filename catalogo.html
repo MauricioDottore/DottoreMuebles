@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DottoreMuebles</title>
-    <!-- Font Awesome-->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
     <!-- Font Bodoni Moda -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +13,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="styles.css">
-</head>
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
 
+    <style>
+        /* Styles for the gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
 <body>
 
     <div class="container">
-
         <!-- Navigation -->
         <nav class="nav-main">
             <!-- Brand -->
@@ -41,132 +61,112 @@
             </ul>
 
             <!-- Burger Menu (only visible on mobile) -->
-<div class="burger-menu">
-    <div class="burger-icon">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
-    </div>
-</div>
-
+            <div class="burger-menu">
+                <div class="burger-icon">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </nav>
     </div>
 
     
-<!-- Álbum de Fotos -->
-<div class="album-content">
-    <h1>Catálogo</h1>
+    <!-- Obras realizadas -->
+    <div class="album-content">
+        <h1>Catálogo</h1>
 
-    <!-- Puertas de ingreso -->
-    <div class="catalog-section">
-        <h2>Puertas de ingreso</h2>
-        <div class="photo-carousel">
-            <!-- Aquí van las fotos de puertas de ingreso -->
-            <div class="photo">
-                <img src="Puertas exteriores\20191217_113547.jpg" alt="Puerta de ingreso 1">
-            </div>
-            <!-- Agrega más fotos de puertas de ingreso aquí -->
-            <div class="photo">
-                <img src="Puertas exteriores\20201030_124436.jpg" alt="Puerta de ingreso 1">
-            </div>
-            <div class="photo">
-                <img src="Puertas exteriores\20210722_142100.jpg" alt="Puerta de ingreso 1">
-            </div>
-            <div class="photo">
-                <img src="Puertas exteriores\20220526_135138.jpg" alt="Puerta de ingreso 1">
-            </div>
+        <h2>Puertas exteriores</h2>
+        <div class="gallery">
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas exteriores\20191217_113547.jpg">
+                <img src="Puertas exteriores\20191217_113547.jpg" alt="Placeholder Image 1">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas exteriores\20201030_124436.jpg">
+                <img src="Puertas exteriores\20201030_124436.jpg" alt="Placeholder Image 2">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas exteriores\20210722_142100.jpg">
+                <img src="Puertas exteriores\20210722_142100.jpg" alt="Placeholder Image 2">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas exteriores\20220526_135138.jpg">
+                <img src="Puertas exteriores\20220526_135138.jpg" alt="Placeholder Image 1">
+            </a>
         </div>
-    </div>
 
-    <!-- Puertas interiores -->
-    <div class="catalog-section">
         <h2>Puertas interiores</h2>
-        <div class="photo-carousel">
-            <!-- Aquí van las fotos de puertas interiores -->
-            <div class="photo">
-                <img src="Puertas interiores\20201030_125422.jpg" alt="Puerta interior 1">
-            </div>
-            <div class="photo">
-                <img src="Puertas interiores\20210305_131644.jpg" alt="Puerta interior 1">
-            </div>
-            <div class="photo">
-                <img src="Puertas interiores\20220317_123031.jpg" alt="Puerta interior 1">
-            </div>
-            <div class="photo">
-                <img src="Puertas interiores\20220426_114959.jpg" alt="Puerta interior 1">
-            </div>
-            <!-- Agrega más fotos de puertas interiores aquí -->
+        <div class="gallery">
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas interiores\20201030_125422.jpg">
+                <img src="Puertas interiores\20201030_125422.jpg" alt="Placeholder Image 1">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas interiores\20210305_131644.jpg">
+                <img src="Puertas interiores\20210305_131644.jpg" alt="Placeholder Image 2">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas interiores\20220317_123031.jpg">
+                <img src="Puertas interiores\20220317_123031.jpg" alt="Placeholder Image 2">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Puertas interiores\20220426_114959.jpg">
+                <img src="Puertas interiores\20220426_114959.jpg" alt="Placeholder Image 1">
+            </a>
         </div>
-    </div>
 
-    <!-- Equipamiento -->
-    <div class="catalog-section">
         <h2>Equipamiento</h2>
-        <div class="photo-carousel">
-            <!-- Aquí van las fotos de equipamiento -->
-            <div class="photo">
-                <img src="Equipamiento\20190918_135958.jpg" alt="Equipamiento 1">
-            </div>
-            <div class="photo">
-                <img src="Equipamiento\20191107_130524.jpg" alt="Equipamiento 1">
-            </div>
-            <div class="photo">
-                <img src="Equipamiento\20210304_122310.jpg" alt="Equipamiento 1">
-            </div>
-            <div class="photo">
-                <img src="Equipamiento\20210517_114055.jpg" alt="Equipamiento 1">   
-            </div>
+        <div class="gallery">
+            <a class="gallery-item" data-fancybox="gallery" href="Equipamiento\20190918_135958.jpg">
+                <img src="Equipamiento\20190918_135958.jpg" alt="Placeholder Image 1">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Equipamiento\20191107_130524.jpg">
+                <img src="Equipamiento\20191107_130524.jpg" alt="Placeholder Image 2">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Equipamiento\20210304_122310.jpg">
+                <img src="Equipamiento\20210304_122310.jpg" alt="Placeholder Image 2">
+            </a>
+            <a class="gallery-item" data-fancybox="gallery" href="Equipamiento\20210517_114055.jpg">
+                <img src="Equipamiento\20210517_114055.jpg" alt="Placeholder Image 1">
+            </a>
         </div>
+
     </div>
-</div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="footer-container">
-        <div class="footer-section">
-            <ul class="footer-logo-list">
-                <li><img src="Logos Dottore Muebles\240240-blanco-e1537377524166_260x1002.png" alt="Logo 1"></li>
-                <li><img src="Logos Dottore Muebles\Dupont-Logo1.png" alt="Logo 2"></li>
-                <li><img src="Logos Dottore Muebles\Corian_New_Logo_20171.png" alt="Logo 3"></li>
-            </ul>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <ul class="footer-logo-list">
+                    <li><img src="Logos Dottore Muebles\240240-blanco-e1537377524166_260x1002.png" alt="Logo 1"></li>
+                    <li><img src="Logos Dottore Muebles\Dupont-Logo1.png" alt="Logo 2"></li>
+                    <li><img src="Logos Dottore Muebles\Corian_New_Logo_20171.png" alt="Logo 3"></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Cerrito 3275, Rosario, Santa Fe</li>
+                    <li><i class="fas fa-clock"></i> Lunes a viernes de 8 a 17 hs.</li>
+                    <li><i class="fas fa-phone"></i> Contacto: 54 9-341 581-4691</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:dottoremuebles@gmail.com">dottoremuebles@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <ul class="footer-social-list">
+                    <li><a href="https://www.facebook.com/DottoreMuebles?locale=es_LA"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/dottoremuebles/?hl=es"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.linkedin.com/company/dottore-muebles/about/"><i class="fab fa-linkedin"></i></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="footer-section">
-            <ul class="footer-contact-list">
-                <li><i class="fas fa-map-marker-alt"></i> Cerrito 3275, Rosario, Santa Fe</li>
-                <li><i class="fas fa-clock"></i> Lunes a viernes de 8 a 17 hs.</li>
-                <li><i class="fas fa-phone"></i> Contacto: 54 9-341 581-4691</li>
-                <li><i class="fas fa-envelope"></i> <a href="mailto:dottoremuebles@gmail.com">dottoremuebles@gmail.com</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <ul class="footer-social-list">
-                <li><a href="https://www.facebook.com/DottoreMuebles?locale=es_LA"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="https://www.instagram.com/dottoremuebles/?hl=es"><i class="fab fa-instagram"></i></a></li>
-                <li><a href="https://www.linkedin.com/company/dottore-muebles/about/"><i class="fab fa-linkedin"></i></a></li>
-            </ul>
-        </div>
+    </footer>
+
+    <!-- WhatsApp button container -->
+    <div class="whatsapp-container">
+        <a href="https://api.whatsapp.com/send?phone=5493415814691" class="whatsapp-btn" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
     </div>
-</footer>
-
-<body>
-    <!-- Your existing HTML code -->
-
-    <!-- WhatsApp button -->
-    <a href="https://api.whatsapp.com/send?phone=5493415814691" class="whatsapp-btn" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</body>
 
     <!-- SCROLL REVEAL -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <!-- CUSTOM JS -->
     <script src="script.js"></script>
-    
-
 </body>
-
 </html>
-
-
-
-

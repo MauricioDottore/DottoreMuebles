@@ -547,10 +547,38 @@ body {
     }
 }
 
+/* Estilos para logos-container */
+.logos-container {
+    background-color: #f2f2f2; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-top: 30px; /* Margen superior */
+}
+
+/* Estilos para la sección de logos */
+.logos {
+    display: flex; /* Mostrar las imágenes en una fila */
+    flex-wrap: wrap; /* Permitir que las imágenes se envuelvan a la siguiente línea si no hay suficiente espacio */
+    justify-content: center; /* Centrar las imágenes horizontalmente */
+}
+
+/* Estilos para las imágenes de los logos */
+.logos img {
+    width: 150px; /* Ancho de las imágenes */
+    height: 150px; /* Altura de las imágenes */
+    margin: 10px; /* Margen entre las imágenes */
+    transition: transform 0.3s ease; /* Transición para el efecto de hover */
+    border-radius: 10px;
+}
+
+/* Efecto de hover para las imágenes */
+.logos img:hover {
+    transform: scale(1.1); /* Aumentar ligeramente el tamaño de la imagen al pasar el mouse */
+}
 
 
+/* Obras realizadas */
 /* Mobile Devices Styles */
-
 /* Common Styles */
 body {
     font-family: 'Montserrat', sans-serif;
