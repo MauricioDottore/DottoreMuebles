@@ -563,14 +563,15 @@ body {
 }
 
 /* Estilos para las imágenes de los logos */
-
 .logos img {
     width: 150px; /* Ancho de las imágenes */
     height: 150px; /* Altura de las imágenes */
     margin: 10px; /* Margen entre las imágenes */
     transition: transform 0.3s ease; /* Transición para el efecto de hover */
     border-radius: 10px;
+    object-fit: contain; /* Ajusta la imagen dentro del contenedor sin deformarla */
 }
+
 
 
 /* Efecto de hover para las imágenes */
