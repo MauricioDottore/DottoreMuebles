@@ -90,7 +90,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.25);
     z-index: 1;
 }
 
@@ -120,6 +120,53 @@ body {
     font-weight: bold; /* Make the title bold */
     z-index: 3;
 }
+
+/*Slider2*/
+.slider2 {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: calc(100vh - 100px);
+}
+
+.slider2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 1;
+}
+
+.slider2 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+    z-index: 2;
+}
+
+.slider2 ul li {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slider2-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 36px; /* Adjust font size as needed */
+    font-weight: bold; /* Make the title bold */
+    z-index: 3;
+}
+
 
 .photo-carousel {
     display: none;
@@ -573,6 +620,7 @@ body {
 }
 
 
+
 /* Efecto de hover para las imágenes */
 .logos img:hover {
     transform: scale(1.1); /* Aumentar ligeramente el tamaño de la imagen al pasar el mouse */
@@ -662,27 +710,6 @@ a {
     width: 100%;
 }
 
-.slider {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    height: calc(100vh - 100px); /* Adjust according to your header height */
-}
-
-.slider ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    transition: transform 0.5s ease;
-    height: 100%;
-}
-
-.slider ul li {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
 
 .tricolor-panel {
     background-color: #fff;
@@ -756,7 +783,7 @@ a {
 }
 
 .footer {
-    background-color: #333;
+    background-color: #252525;
     color: #fff;
     padding: 20px 0;
     text-align: center;

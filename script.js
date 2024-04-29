@@ -1,3 +1,4 @@
+//SLIDER1//
 document.addEventListener('DOMContentLoaded', function () {
     const slider = document.querySelector('.slider ul');
     const slides = document.querySelectorAll('.slider ul li');
@@ -16,6 +17,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(nextSlide, 3000); // Cambia de slide cada 3.5 segundos
 });
+//SLIDER2//
+document.addEventListener('DOMContentLoaded', function () {
+    const slider2 = document.querySelector('.slider2 ul');
+    const slides = document.querySelectorAll('.slider2 ul li');
+    const slideWidth = slides[0].clientWidth;
+    let currentIndex = 0;
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        updateSlider();
+    }
+
+    function updateSlider() {
+        const newPosition = -currentIndex * slideWidth;
+        slider2.style.transform = `translateX(${newPosition}px)`;
+    }
+
+    setInterval(nextSlide, 3000); // Cambia de slide cada 3.5 segundos
+});
+
 
 /*CATALOGO*/
 // En el archivo script.js
