@@ -15,7 +15,7 @@ body {
 }
 
 .nav-main {
-    background-color: #252525;
+    background-color: #121317;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -179,7 +179,7 @@ body {
 
 /*FOOTER*/
 .footer {
-    background-color: #252525;
+    background-color: #121317;
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -247,7 +247,7 @@ body {
 /* CSS mejorado para "Nuestra ubicación" con interactividad en el h2 */
 .location {
     text-align: center;
-    background-color: #252525; /* Fondo oscuro */
+    background-color: #121317; /* Fondo oscuro */
     color: #ffffff; /* Texto blanco */
     padding: 10px 0; /* Aumentar el espacio interno */
 }
@@ -652,7 +652,7 @@ a {
 }
 
 .nav-main {
-    background-color: #252525;
+    background-color: #121317;
     position: fixed;
     width: 100%;
     z-index: 1000;
@@ -742,12 +742,12 @@ a {
 
 .panel-item p {
     font-size: 14px;
-    color: #666;
+    color: #121317;
 }
 
 .location {
     text-align: center;
-    background-color: #252525;
+    background-color: #121317;
     color: #ffffff;
     padding: 20px;
     margin-top: 20px;
@@ -783,7 +783,7 @@ a {
 }
 
 .footer {
-    background-color: #252525;
+    background-color: #121317;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -849,10 +849,10 @@ a {
     .nav-menu {
         display: none;
         position: fixed;
-        top: 60px; /* Adjust according to your header height */
+        top: 54px; /* Adjust according to your header height */
         left: 0;
         width: 100%;
-        background-color: #252525;
+        background-color: #121317;
         padding-top: 20px;
         text-align: center;
         z-index: 1000;
@@ -889,15 +889,13 @@ a {
     }
 }
 
-
-/* HAMBURGESA */
-/* Burger Menu Styles */
+/* Styles for the burger menu */
 .burger-menu {
-    display: none; /* Hidden by default */
+    display: block;
     position: fixed;
     top: 15px;
-    right: 20px; /* Adjust as needed */
-    z-index: 999; /* Ensure it's above other content */
+    right: 20px;
+    z-index: 999;
 }
 
 .burger-icon {
@@ -912,45 +910,43 @@ a {
     height: 3px;
     background-color: #ffffff;
     margin: 5px auto;
-    transition: transform 0.3s ease; /* Smooth transition effect */
+    transition: transform 0.3s ease;
 }
 
-/* Animation for burger icon lines */
-@keyframes rotateBurger {
-    0% {
-        transform: rotate(0);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+/* Styles for the mobile navigation menu */
+.nav-menu-mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #121317;
+    padding-top: 20px;
+    text-align: center;
+    z-index: 998; /* Ensure it's below the burger menu */
 }
 
-/* Media Query for Mobile Devices */
-@media screen and (max-width: 768px) {
-    .burger-menu {
-        display: block; /* Show burger menu on mobile */
-    }
+.nav-menu-mobile.active {
+    display: block;
+}
 
-    .nav-menu {
-        display: none; /* Hide regular nav menu on mobile */
-    }
+.nav-menu-mobile ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 
-    .nav-menu-right {
-        display: none; /* Hide right nav menu on mobile */
-    }
+.nav-menu-mobile li {
+    display: block;
+    margin-bottom: 10px;
+}
 
-    .burger-menu.active .line:nth-child(1) {
-        animation: rotateBurger 0.6s ease forwards;
-    }
+.nav-menu-mobile a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+}
 
-    .burger-menu.active .line:nth-child(2) {
-        opacity: 0;
-    }
-
-    .burger-menu.active .line:nth-child(3) {
-        animation: rotateBurger 0.6s ease forwards;
-    }
+.nav-menu-mobile a:hover {
+    color: #e6e6e6;
 }
