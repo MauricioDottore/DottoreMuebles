@@ -1,6 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    font-weight:300;
+    font-weight: 300;
     background-color: #ffffff;
     color: #000000;
     margin: 0;
@@ -31,33 +31,26 @@ body {
     max-height: 50px; /* Ajustar la altura máxima del logo */
 }
 
-/*NAV MENU*/
-.nav-menu,
-.nav-menu-right {
+/* NAV MENU */
+.nav-menu {
     list-style: none;
     padding: 0;
     margin: 0;
+    margin-right: 100px; /* Add margin to the right */
 }
 
-.nav-menu li,
-.nav-menu-right li {
+.nav-menu li {
     display: inline-block;
     margin-right: 20px; /* Ajustar el margen entre elementos del menú */
 }
 
-.nav-menu li:last-child,
-.nav-menu-right li:last-child {
-    margin-right: 0; /* Eliminar el margen derecho del último elemento del menú */
-}
-
-.nav-menu li a,
-.nav-menu-right li a {
+.nav-menu li a {
     color: #ffffff;
     text-decoration: none;
     font-size: 15px;
 }
 
-/*HOVER EFECTO*/
+/* HOVER EFECTO */
 .nav-menu li a:hover {
     color: #e6e6e6; /* Cambia el color del texto al pasar el mouse */
 }
@@ -651,65 +644,6 @@ a {
     overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
-.nav-main {
-    background-color: #121317;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.nav-main img {
-    margin-top: 0px;
-    max-height: 50px;
-}
-
-.nav-menu,
-.nav-menu-right {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.nav-menu li,
-.nav-menu-right li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.nav-menu li:last-child,
-.nav-menu-right li:last-child {
-    margin-right: 0;
-}
-
-.nav-menu li a,
-.nav-menu-right li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 15px;
-}
-
-.nav-menu li a:hover {
-    color: #e6e6e6;
-}
-
-.nav-menu li a::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background-color: #e7e7e7;
-    transition: width 0.3s;
-}
-
-.nav-menu li a:hover::after {
-    width: 100%;
-}
-
 
 .tricolor-panel {
     background-color: #fff;
@@ -867,9 +801,6 @@ a {
         margin-bottom: 10px;
     }
 
-    .nav-main {
-        justify-content: flex-start;
-    }
 
     .nav-menu {
         order: 2; /* Moves the nav-menu to the right */
@@ -887,30 +818,6 @@ a {
         max-width: 100%;
         margin-bottom: 10px;
     }
-}
-
-/* Styles for the burger menu */
-.burger-menu {
-    display: block;
-    position: fixed;
-    top: 15px;
-    right: 20px;
-    z-index: 999;
-}
-
-.burger-icon {
-    width: 25px;
-    height: 20px;
-    position: relative;
-    cursor: pointer;
-}
-
-.line {
-    width: 100%;
-    height: 3px;
-    background-color: #ffffff;
-    margin: 5px auto;
-    transition: transform 0.3s ease;
 }
 
 /* Styles for the mobile navigation menu */
@@ -950,3 +857,93 @@ a {
 .nav-menu-mobile a:hover {
     color: #e6e6e6;
 }
+
+/* Existing CSS */
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1001; /* Ensuring the hamburger menu is above other content */
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Adjust this value as needed */
+    transform: translate(-50%, -50%);
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ffffff;
+    z-index: 1001; /* Ensuring the hamburger menu is above other content */
+    position: absolute;
+    top: 50%;
+    right: 10%; /* Adjust this value as needed */
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px; /* Adjust according to your header height */
+        left: calc(100% - 220px); /* Aligning the menu to the right */
+        background-color: #121317;
+        border-radius: 8px;
+        width: 175px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    .nav-menu li {
+        display: block;
+        margin: 10px 0;
+        text-align: right;
+        margin-right: 20px;
+    }
+}
+
+
+/* Additional CSS for transitions */
+.nav-menu.show {
+    display: flex;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Additional CSS for transitions */
+.nav-menu.show {
+    display: flex;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

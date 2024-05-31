@@ -39,3 +39,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     setInterval(nextSlide, 3000); // Change slide every 3.5 seconds
 });
+
+//burger menu
+document.addEventListener("DOMContentLoaded", () => {
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
+});
