@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --color-accent: #d4af37;
+  /* Gold accent */
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-200;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+  }
+}
+
+/* Custom Utilities for Premium effects */
+@layer utilities {
+  .glass-nav-light {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  }
+
+  .glass-nav-dark {
+    background: rgba(10, 10, 10, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .image-hover-zoom {
+    transition: transform 0.7s cubic-bezier(0.25, 1, 0.5, 1);
+  }
+
+  .image-hover-zoom:hover {
+    transform: scale(1.05);
+  }
+}
