@@ -76,16 +76,16 @@ export default function Home() {
                         <Link to="/catalogo" className="group block relative h-[500px] overflow-hidden">
                             <img src="/assets/Equipamiento/IMG_7347_Original.jpg" className="w-full h-full object-cover image-hover-zoom" alt="Cocinas" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent dark:from-black/90 flex flex-col justify-end p-8">
-                                <h3 className="font-serif text-2xl text-white mb-2">Cocinas Culinarias</h3>
-                                <p className="text-sm font-light text-gray-200 dark:text-gray-400 tracking-wider">Ergonomía e innovación</p>
+                                <h3 className="font-serif text-2xl text-white mb-2">Vestidores a Medida</h3>
+                                <p className="text-sm font-light text-gray-200 dark:text-gray-400 tracking-wider">Organización y elegancia</p>
                             </div>
                         </Link>
                         {/* Card 2 */}
                         <Link to="/catalogo" className="group block relative h-[500px] overflow-hidden">
                             <img src="/assets/Obras realizadas/Casa Country Aldea del lago/20220426_114325.jpg" className="w-full h-full object-cover object-top image-hover-zoom" alt="Vestidores" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent dark:from-black/90 flex flex-col justify-end p-8">
-                                <h3 className="font-serif text-2xl text-white mb-2">Vestidores Boutique</h3>
-                                <p className="text-sm font-light text-gray-200 dark:text-gray-400 tracking-wider">Organización de alta costura</p>
+                                <h3 className="font-serif text-2xl text-white mb-2">Puertas de Ingreso</h3>
+                                <p className="text-sm font-light text-gray-200 dark:text-gray-400 tracking-wider">Diseño y calidez desde la entrada</p>
                             </div>
                         </Link>
                         {/* Card 3 */}
@@ -93,7 +93,7 @@ export default function Home() {
                             <img src="/assets/Puertas exteriores/IMG_0621_Original.jpg" className="w-full h-full object-cover object-center image-hover-zoom" alt="Aberturas" />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent dark:from-black/90 flex flex-col justify-end p-8">
                                 <h3 className="font-serif text-2xl text-white mb-2">Aberturas Pivotantes</h3>
-                                <p className="text-sm font-light text-gray-200 dark:text-gray-400 tracking-wider">Maderas macizas artesanales</p>
+                                <p className="text-sm font-light text-gray-200 dark:text-gray-400 tracking-wider">Maderas macizas y artesanales</p>
                             </div>
                         </Link>
                     </div>
