@@ -64,7 +64,7 @@ export default function Home() {
             </section>
 
             {/* FEATURED SPACES */}
-            <section className="py-32 bg-gray-100 dark:bg-[#050505] transition-colors duration-300">
+            <section className="py-32 bg-gray-100 dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-24 relative">
                         <span className="text-[120px] md:text-[200px] font-serif text-black/5 dark:text-white/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 select-none pointer-events-none">ESPACIOS</span>
